@@ -4,13 +4,12 @@ import FavouriteNames from './FavouriteNames';
 
 import './savedNames.css';
 
-const SavedNames = ({historicNames, favouriteNames, currentName, onAddToFavourite, onRemoveFromFavouite}) => {
+const SavedNames = ({historicNames, favouriteNames, onAddToFavourite, onRemoveFromFavouite}) => {
 
     return (
         <div className="savedNamesContainer">
             <HistoricNames 
                 names={historicNames}
-                currentName={currentName}
                 favouriteNames={favouriteNames}
                 onAddToFavourite={onAddToFavourite}
             />

@@ -3,12 +3,13 @@ import {Button} from 'antd';
 import NAMES from '../../constants/names'
 
 
-const NewNameButton = ({addHistoricBabyName, setCurrentForename, setCurrentSurname}) => {
+const NewNameButton = ({currentName, addHistoricBabyName, setCurrentForename, setCurrentSurname}) => {
 
     const onBabyNameChange = () => {       
         var newName = NAMES[Math.floor(Math.random() * NAMES.length)];
-        addHistoricBabyName(newName);
+        addHistoricBabyName({forename: newName, surname: currentName.surname});
         setCurrentForename(newName);
+        setCurrentSurname(currentName.surname)
     }
   
     return (

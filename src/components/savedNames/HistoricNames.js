@@ -1,7 +1,7 @@
 import React from 'react';
 import { List, Button } from 'antd';
 
-const HistoricNames = ({names, favouriteNames, onAddToFavourite, currentName}) => {
+const HistoricNames = ({names, favouriteNames, onAddToFavourite}) => {
 
     return (
         <List
@@ -15,13 +15,13 @@ const HistoricNames = ({names, favouriteNames, onAddToFavourite, currentName}) =
                         type="normal" 
                         shape="round" 
                         icon="heart" 
-                        onClick={() => onAddToFavourite({forename: name, surname: currentName.surname})}
+                        onClick={() => onAddToFavourite({forename: name.forename, surname: name.surname})}
                         disabled={favouriteNames.indexOf(name) >= 0}
                     />]}
                 >
                     <List.Item.Meta
-                        title={name}
-                        description={currentName.surname}
+                        title={name.forename}
+                        description={name.surname}
                     />
                 </List.Item>
                     
