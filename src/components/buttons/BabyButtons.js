@@ -5,11 +5,22 @@ import GenderButton from './GenderButton';
 import AlphabetButtons from './AlphabetButtons';
 
 import './BabyButton.css';
+import { Icon, Button } from 'antd';
 
-const BabyButtons = ({currentName, filters, addHistoricBabyName, setCurrentForename, setCurrentSurname, setGenderFilter, setFirstNameCharFilter}) => {
+const BabyButtons = ({currentName, favouriteNames, filters, addHistoricBabyName, addToFavourites, setCurrentForename, setCurrentSurname, setGenderFilter, setFirstNameCharFilter}) => {
 
     return (
         <div className="inputContainer">
+            <div className="favContainer">
+                <Button 
+                    shape="round" 
+                    disabled={favouriteNames.filter(({forename, surname}) => forename === currentName.forename && surname === currentName.surname).length > 0 || currentName.forename === '?????'}
+                    onClick={() => addToFavourites({forename: currentName.forename, surname: currentName.surname})}
+                    style={{borderColor: 'red', color: 'red'}}
+                >
+                    Add to Favourites <Icon type='heart' theme="filled" style={{color: 'red'}}/>
+                </Button> 
+            </div>
             <div className="buttonContainer">
                 <NewNameButton 
                     currentName={currentName} 
