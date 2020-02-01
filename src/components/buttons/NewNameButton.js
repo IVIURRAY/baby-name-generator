@@ -13,7 +13,7 @@ const NewNameButton = ({currentName, filters, addHistoricBabyName, setCurrentFor
   
     return (
         <div className="newNameBtn">
-            <Button icon="smile" onClick={onBabyNameChange} size="large">
+            <Button type='primary' icon="smile" onClick={onBabyNameChange} size="large">
                 New Name
             </Button>
         </div>

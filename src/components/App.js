@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="title">
-        <Emoji text=':baby: Name Generator!'/>
+        <Emoji text=':baby: Name Generator :baby:'/>
       </div>  
       <NameContainer />
       <ButtonContainer />

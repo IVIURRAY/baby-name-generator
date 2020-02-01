@@ -13,7 +13,7 @@ const EditSurnameButton = ({currentName, setCurrentSurname}) => {
 
     return (
         <div className="editSurnameBtn">
-            <Button icon="edit" size="large" onClick={() => setIsVisible(true)}>
+            <Button type='link' icon="edit" size="large" onClick={() => setIsVisible(true)}>
                 Edit Surname
             </Button>
             <Modal
