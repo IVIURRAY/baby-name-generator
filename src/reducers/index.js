@@ -9,7 +9,7 @@ const historicNamesReducer = (state = [], action) => {
 }
 
 const initState = {
-    forename: '?????',
+    forename: 'Sam',
     surname: 'Smith'
 }
 const currentNameReducer = (state = initState, action) => {

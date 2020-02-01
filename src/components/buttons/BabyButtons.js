@@ -14,7 +14,7 @@ const BabyButtons = ({currentName, favouriteNames, filters, addHistoricBabyName,
             <div className="favContainer">
                 <Button 
                     shape="round" 
-                    disabled={favouriteNames.filter(({forename, surname}) => forename === currentName.forename && surname === currentName.surname).length > 0 || currentName.forename === '?????'}
+                    disabled={favouriteNames.filter(({forename, surname}) => forename === currentName.forename && surname === currentName.surname).length > 0}
                     onClick={() => addToFavourites({forename: currentName.forename, surname: currentName.surname})}
                     style={{borderColor: 'red', color: 'red'}}
                 >
