@@ -19,6 +19,8 @@ const currentNameReducer = (state = '?????', action) => {
 const favouriteNamesReducers = (state = [], action) => {
     if (action.type === 'ADD_TO_FAVOURITES') {
         return [action.payload].concat(state);
+    } else if (action.type === 'REMOVE_FROM_FAVOURITES') {
+        return state.filter(name => name !== action.payload);
     }
 
     return state;

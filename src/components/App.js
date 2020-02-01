@@ -1,8 +1,8 @@
 import React from 'react';
 import {LastName} from './names'
 import FirstNameContainer from '../containers/FirstNameContainer';
-import HistoricNamesContainer from '../containers/HistoricNamesContainer';
 import NewNameContainer from '../containers/NewNameButtonContainer';
+import SavedNamesContainer from '../containers/SavedNamesContainer';
 
 import './App.css';
 
@@ -20,7 +20,7 @@ const App = () => {
         <LastName />
       </div>
       <NewNameContainer />
-      <HistoricNamesContainer />
+      <SavedNamesContainer />
     </div>
   )
 }
