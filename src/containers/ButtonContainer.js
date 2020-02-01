@@ -3,7 +3,8 @@ import {addHistoricName, setCurrentForename, setCurrentSurname, setFilterGender}
 import { BabyButtons } from '../components/buttons';
 
 const mapStateToProps = state => ({
-    currentName: state.currentName
+    currentName: state.currentName,
+    filters: state.filters
 });
 
 

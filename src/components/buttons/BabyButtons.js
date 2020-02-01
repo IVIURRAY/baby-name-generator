@@ -5,7 +5,7 @@ import { GenderButton } from './GenderButton';
 
 import './BabyButton.css';
 
-const BabyButtons = ({currentName, addHistoricBabyName, setCurrentForename, setCurrentSurname, setGenderFilter}) => {
+const BabyButtons = ({currentName, filters, addHistoricBabyName, setCurrentForename, setCurrentSurname, setGenderFilter}) => {
 
     return (
         <div className="buttonContainer">
@@ -13,6 +13,7 @@ const BabyButtons = ({currentName, addHistoricBabyName, setCurrentForename, setC
                 currentName={currentName} 
                 addHistoricBabyName={addHistoricBabyName}
                 setCurrentForename={setCurrentForename}
+                filters={filters}
             />
             <GenderButton 
                 setGenderFilter={setGenderFilter}

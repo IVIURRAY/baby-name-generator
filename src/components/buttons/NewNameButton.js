@@ -1,12 +1,12 @@
 import React from 'react';
 import {Button} from 'antd';
-import NAMES from '../../constants/names'
+import BabyNameGenerator from '../../services/BabyNameGenerator';
 
 
-const NewNameButton = ({currentName, addHistoricBabyName, setCurrentForename, setCurrentSurname}) => {
+const NewNameButton = ({currentName, filters, addHistoricBabyName, setCurrentForename}) => {
 
     const onBabyNameChange = () => {       
-        var newName = NAMES[Math.floor(Math.random() * NAMES.length)];
+        const newName = BabyNameGenerator(filters.isBoy, filters.firstNameChar)
         addHistoricBabyName({forename: newName, surname: currentName.surname});
         setCurrentForename(newName);
     }
@@ -17,7 +17,6 @@ const NewNameButton = ({currentName, addHistoricBabyName, setCurrentForename, se
                 New Name
             </Button>
         </div>
-        
     )
 }
 
