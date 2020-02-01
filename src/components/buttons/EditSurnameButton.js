@@ -31,6 +31,4 @@ const EditSurnameButton = ({currentName, setCurrentSurname}) => {
     )
 }
 
-export {
-    EditSurnameButton
-};
+export default EditSurnameButton;

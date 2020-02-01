@@ -20,6 +20,4 @@ const NewNameButton = ({currentName, filters, addHistoricBabyName, setCurrentFor
     )
 }
 
-export {
-    NewNameButton
-};
+export default NewNameButton;

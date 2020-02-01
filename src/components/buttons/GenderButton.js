@@ -16,6 +16,4 @@ const GenderButton = ({setGenderFilter}) => {
 
 }
 
-export {
-    GenderButton
-}
+export default GenderButton;
