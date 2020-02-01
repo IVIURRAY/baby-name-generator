@@ -1,4 +1,5 @@
 import React from 'react';
+import Emoji from "react-emoji-render";
 import NameContainer from '../containers/NameContainer';
 import ButtonContainer from '../containers/ButtonContainer';
 import SavedNamesContainer from '../containers/SavedNamesContainer';
@@ -6,13 +7,12 @@ import 'antd/dist/antd.css';
 import './App.css';
 
 
-
 const App = () => {
   
   return (
     <div className="App">
       <div className="title">
-        Smith's Baby Name Generator!
+        <Emoji text=':baby: Name Generator!'/>
       </div>  
       <NameContainer />
       <ButtonContainer />
