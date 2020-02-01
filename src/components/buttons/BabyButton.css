@@ -1,19 +1,23 @@
 .buttonContainer {
     display: flex;
     flex-direction: row;
-    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     justify-content: center;
     align-items: center;
 }
 
 .newNameBtn {
-    padding: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .editSurnameBtn {
-    padding: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .genderBtn {
-    padding: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
