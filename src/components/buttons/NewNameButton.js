@@ -9,15 +9,15 @@ const NewNameButton = ({currentName, addHistoricBabyName, setCurrentForename, se
         var newName = NAMES[Math.floor(Math.random() * NAMES.length)];
         addHistoricBabyName({forename: newName, surname: currentName.surname});
         setCurrentForename(newName);
-        setCurrentSurname(currentName.surname)
     }
   
     return (
-        <div className="buttonContainer">
+        <div className="newNameBtn">
             <Button icon="smile" onClick={onBabyNameChange} size="large">
                 New Name
             </Button>
         </div>
+        
     )
 }
 

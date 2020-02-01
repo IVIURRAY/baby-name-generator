@@ -1,0 +1,15 @@
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    justify-content: center;
+    
+}
+
+.newNameBtn {
+    padding: 20px;
+}
+
+.editSurnameBtn {
+    padding: 20px;
+}

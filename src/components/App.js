@@ -1,9 +1,10 @@
 import React from 'react';
 import NameContainer from '../containers/NameContainer';
-import NewNameContainer from '../containers/NewNameButtonContainer';
+import ButtonContainer from '../containers/ButtonContainer';
 import SavedNamesContainer from '../containers/SavedNamesContainer';
 import 'antd/dist/antd.css';
 import './App.css';
+
 
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
         Smith's Baby Name Generator!
       </div>  
       <NameContainer />
-      <NewNameContainer />
+      <ButtonContainer />
       <SavedNamesContainer />
     </div>
   )

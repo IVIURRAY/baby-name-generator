@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { NewNameButton } from '../components/buttons/NewNameButton';
 import {addHistoricName, setCurrentForename, setCurrentSurname} from '../actions'
+import { BabyButtons } from '../components/buttons';
 
 const mapStateToProps = state => ({
     currentName: state.currentName
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(NewNameButton)
+)(BabyButtons)
