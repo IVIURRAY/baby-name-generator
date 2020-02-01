@@ -8,9 +8,17 @@ const historicNamesReducer = (state = [], action) => {
     return state;
 }
 
-const currentNameReducer = (state = '?????', action) => {
-    if (action.type === 'SET_CURRENT_NAME') {
-        return action.payload;
+const initState = {
+    forename: '?????',
+    surname: 'Murray'
+}
+const currentNameReducer = (state = initState, action) => {
+    if (action.type === 'SET_CURRENT_FORENAME') {
+        state.forename = action.payload;
+        return state;
+    } else if (action.type === 'SET_CURRENT_SURNAME') {
+        state.surname = action.payload
+        return state;
     }
 
     return state;
@@ -18,9 +26,9 @@ const currentNameReducer = (state = '?????', action) => {
 
 const favouriteNamesReducers = (state = [], action) => {
     if (action.type === 'ADD_TO_FAVOURITES') {
-        return [action.payload].concat(state);
+        return state.concat(action.payload)
     } else if (action.type === 'REMOVE_FROM_FAVOURITES') {
-        return state.filter(name => name !== action.payload);
+        return state.filter(({forename, surname}) => !(forename === action.payload.forename && surname === action.payload.surname))
     }
 
     return state;

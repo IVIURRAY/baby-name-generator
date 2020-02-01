@@ -3,8 +3,12 @@ const addHistoricName = payload => {
     return {type: 'ADD_HISTORIC_NAME', payload}
 }
 
-const setCurrentName = payload => {
-    return {type: 'SET_CURRENT_NAME', payload}
+const setCurrentForename = payload => {
+    return {type: 'SET_CURRENT_FORENAME', payload}
+}
+
+const setCurrentSurname = payload => {
+    return {type: 'SET_CURRENT_SURNAME', payload}
 }
 
 const addToFavourites = payload => {
@@ -17,7 +21,8 @@ const removeFromFavourites = payload => {
 
 export {
     addHistoricName,
-    setCurrentName,
+    setCurrentForename,
+    setCurrentSurname,
     addToFavourites,
     removeFromFavourites
 };

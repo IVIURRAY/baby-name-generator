@@ -3,7 +3,7 @@ import {LastName} from './names'
 import FirstNameContainer from '../containers/FirstNameContainer';
 import NewNameContainer from '../containers/NewNameButtonContainer';
 import SavedNamesContainer from '../containers/SavedNamesContainer';
-
+import 'antd/dist/antd.css';
 import './App.css';
 
 

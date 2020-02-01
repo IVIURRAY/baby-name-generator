@@ -4,12 +4,13 @@ import { addToFavourites, removeFromFavourites } from '../actions';
 
 const mapStateToProps = state => ({
     historicNames: state.historicNames,
-    favouriteNames: state.favouriteNames
+    favouriteNames: state.favouriteNames,
+    currentName: state.currentName
 });
 
 const mapDispatchToProps = dispatch => ({
-    onAddToFavourite: name => dispatch(addToFavourites(name)),
-    onRemoveFromFavouite: name => dispatch(removeFromFavourites(name))
+    onAddToFavourite: payload => dispatch(addToFavourites(payload)),
+    onRemoveFromFavouite: payload => dispatch(removeFromFavourites(payload))
 })
  
 

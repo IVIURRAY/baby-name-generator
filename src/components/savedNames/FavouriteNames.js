@@ -8,18 +8,19 @@ const FavouriteNames = ({names, onRemoveFromFavouite}) => {
             itemLayout="horizontal"
             dataSource={names}
             header={<div>Favourite Names</div>}
-            renderItem={name => (
+            renderItem={({forename, surname}) => (
                 <List.Item
                     actions={[
                     <Button 
                         type="normal" 
                         shape="round" 
-                        icon="heart" 
-                        onClick={() => onRemoveFromFavouite(name)}
+                        icon="close" 
+                        onClick={() => onRemoveFromFavouite({forename, surname})}
                     />]}
                 >
                     <List.Item.Meta
-                        title={name}
+                        title={forename}
+                        description={surname}
                     />
                 </List.Item>
                     

@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import { NewNameButton } from '../components/buttons/NewNameButton';
-import {addHistoricName, setCurrentName} from '../actions'
+import {addHistoricName, setCurrentForename, setCurrentSurname} from '../actions'
 
 const mapDispatchToProps = dispatch => ({
     addHistoricBabyName: name => dispatch(addHistoricName(name)),
-    setCurrentBabyName: name => dispatch(setCurrentName(name))
+    setCurrentForename: name => dispatch(setCurrentForename(name)),
+    setCurrentSurname: name => dispatch(setCurrentSurname(name))
 })
 
 export default connect(
