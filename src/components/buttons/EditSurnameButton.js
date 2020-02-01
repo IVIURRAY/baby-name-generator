@@ -17,7 +17,7 @@ const EditSurnameButton = ({currentName, setCurrentSurname}) => {
                 Edit Surname
             </Button>
             <Modal
-                title="Basic"
+                title="Enter Surname"
                 visible={isVisible}
                 onOk={handleOnOk}
                 onCancel={() => setIsVisible(false)}
