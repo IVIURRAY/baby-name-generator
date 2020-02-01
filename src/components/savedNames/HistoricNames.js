@@ -16,7 +16,7 @@ const HistoricNames = ({names, favouriteNames, onAddToFavourite}) => {
                         shape="round" 
                         icon="heart" 
                         onClick={() => onAddToFavourite({forename: name.forename, surname: name.surname})}
-                        disabled={favouriteNames.indexOf(name) >= 0}
+                        disabled={favouriteNames.filter(({forename, surname}) => forename === name.forename && surname === name.surname).length > 0}
                     />]}
                 >
                     <List.Item.Meta
