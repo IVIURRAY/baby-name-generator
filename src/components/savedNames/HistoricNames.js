@@ -7,7 +7,7 @@ const HistoricNames = ({names, favouriteNames, onAddToFavourite}) => {
         <List
             itemLayout="horizontal"
             dataSource={names}
-            header={<div>Historic Names</div>}
+            header={<label>Historic Names</label>}
             renderItem={name => (
                 <List.Item
                     actions={[

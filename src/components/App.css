@@ -10,20 +10,8 @@
   padding: 40px;
 }
 
-.babyContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 24px;
-}
-
 .buttonContainer {
   display: flex;
   padding: 30px;
-  justify-content: center;
-}
-
-.historicNames {
-  display: flex;
   justify-content: center;
 }

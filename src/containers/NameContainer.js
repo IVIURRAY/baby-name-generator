@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
-import { FirstName } from '../components/names/FirstName';
+import { Names } from '../components/names';
 
 const mapStateToProps = state => ({
-    name: state.currentName.forename
+    forename: state.currentName.forename,
+    surname: state.currentName.surname
 });
 
 export default connect(
     mapStateToProps,
     null
-)(FirstName)
+)(Names)

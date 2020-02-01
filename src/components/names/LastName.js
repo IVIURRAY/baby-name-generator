@@ -4,7 +4,7 @@ import './LastName.css';
 const LastName = props => {
     return (
         <div className="lastName">
-          Murray
+          <label className="lastNameText">Murray</label>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import './FirstName.css';
 const FirstName = ({name}) => {
   return (
         <div className="firstName">
-          {name}
+          <label className="firstNameText">{name}</label>
         </div>
     )
 }

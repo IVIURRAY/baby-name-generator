@@ -7,7 +7,7 @@ const FavouriteNames = ({names, onRemoveFromFavouite}) => {
         <List
             itemLayout="horizontal"
             dataSource={names}
-            header={<div>Favourite Names</div>}
+            header={<label>Favourite Names</label>}
             renderItem={({forename, surname}) => (
                 <List.Item
                     actions={[

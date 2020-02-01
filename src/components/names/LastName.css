@@ -1,3 +1,10 @@
 .lastName {
-    padding-left: 20px;
-  }
+  display: flex;
+  width: 50%;
+  justify-content: left;
+  padding-left: 20px;
+}
+
+.lastNameText {
+  font-size: 60px;
+}
