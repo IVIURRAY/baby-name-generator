@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {addHistoricName, setCurrentForename, setCurrentSurname} from '../actions'
+import {addHistoricName, setCurrentForename, setCurrentSurname, setFilterGender} from '../actions'
 import { BabyButtons } from '../components/buttons';
 
 const mapStateToProps = state => ({
@@ -10,7 +10,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     addHistoricBabyName: payload => dispatch(addHistoricName(payload)),
     setCurrentForename: name => dispatch(setCurrentForename(name)),
-    setCurrentSurname: name => dispatch(setCurrentSurname(name))
+    setCurrentSurname: name => dispatch(setCurrentSurname(name)),
+    setGenderFilter: gender => dispatch(setFilterGender(gender))
 })
 
 export default connect(

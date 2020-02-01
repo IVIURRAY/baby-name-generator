@@ -32,8 +32,19 @@ const favouriteNamesReducers = (state = [], action) => {
     return state;
 }
 
+const filterReducers = (state = {isBoy: true, firstNameChar: null}, action) => {
+    if (action.type === 'SET_GENDER_FILTER') {
+        return Object.assign({}, state, {isBoy: action.payload === 'BOY'})
+    } else if (action.type === 'SET_FIRST_NAME_CHAR') {
+        return Object.assign({}, state, {firstNameChar: action.payload})
+    }
+
+    return state;
+}
+
 export default combineReducers({
     historicNames: historicNamesReducer,
     currentName: currentNameReducer,
     favouriteNames: favouriteNamesReducers,
+    filters: filterReducers,
 });

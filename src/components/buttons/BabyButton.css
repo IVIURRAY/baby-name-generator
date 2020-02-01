@@ -3,7 +3,7 @@
     flex-direction: row;
     padding: 30px;
     justify-content: center;
-    
+    align-items: center;
 }
 
 .newNameBtn {
@@ -11,5 +11,9 @@
 }
 
 .editSurnameBtn {
+    padding: 20px;
+}
+
+.genderBtn {
     padding: 20px;
 }
