@@ -9,8 +9,8 @@ const historicNamesReducer = (state = [], action) => {
 }
 
 const initState = {
-    forename: 'Sam',
-    surname: 'Smith'
+    forename: 'Joe',
+    surname: 'Bloggs'
 }
 const currentNameReducer = (state = initState, action) => {
     if (action.type === 'SET_CURRENT_FORENAME') {
