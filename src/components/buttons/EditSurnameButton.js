@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, Input } from 'antd';
 
-const EditSurnameButton = ({currentName, setCurrentSurname}) => {
+const EditSurnameButton = ({ currentName, setCurrentSurname }) => {
 
     const [isVisible, setIsVisible] = useState(false);
     const [inputSurname, setInputSurname] = useState(currentName.surname);
@@ -22,8 +22,8 @@ const EditSurnameButton = ({currentName, setCurrentSurname}) => {
                 onOk={handleOnOk}
                 onCancel={() => setIsVisible(false)}
             >
-                <Input 
-                    placeholder={currentName.surname} 
+                <Input
+                    placeholder={currentName.surname}
                     onChange={e => setInputSurname(e.target.value)}
                 />
             </Modal>

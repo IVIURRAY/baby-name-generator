@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch } from 'antd';
 
-const GenderButton = ({setGenderFilter}) => {
+const GenderButton = ({ setGenderFilter }) => {
 
     return (
         <div className="genderBtn">
-            <Switch 
+            <Switch
                 defaultChecked
                 checkedChildren='Boy'
                 unCheckedChildren='Girl'

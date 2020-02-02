@@ -7,38 +7,38 @@ import AlphabetButtons from './AlphabetButtons';
 import './BabyButton.css';
 import { Icon, Button } from 'antd';
 
-const BabyButtons = ({currentName, favouriteNames, filters, addHistoricBabyName, addToFavourites, setCurrentForename, setCurrentSurname, setGenderFilter, setFirstNameCharFilter}) => {
+const BabyButtons = ({ currentName, favouriteNames, filters, addHistoricBabyName, addToFavourites, setCurrentForename, setCurrentSurname, setGenderFilter, setFirstNameCharFilter }) => {
 
     return (
         <div className="inputContainer">
             <div className="favContainer">
-                <Button 
-                    shape="round" 
-                    disabled={favouriteNames.filter(({forename, surname}) => forename === currentName.forename && surname === currentName.surname).length > 0}
-                    onClick={() => addToFavourites({forename: currentName.forename, surname: currentName.surname})}
-                    style={{borderColor: 'red', color: 'red'}}
+                <Button
+                    shape="round"
+                    disabled={favouriteNames.filter(({ forename, surname }) => forename === currentName.forename && surname === currentName.surname).length > 0}
+                    onClick={() => addToFavourites({ forename: currentName.forename, surname: currentName.surname })}
+                    style={{ borderColor: 'red', color: 'red' }}
                 >
-                    Add to Favourites <Icon type='heart' theme="filled" style={{color: 'red'}}/>
-                </Button> 
+                    Add to Favourites <Icon type='heart' theme="filled" style={{ color: 'red' }} />
+                </Button>
             </div>
             <div className="buttonContainer">
-                <NewNameButton 
-                    currentName={currentName} 
+                <NewNameButton
+                    currentName={currentName}
                     addHistoricBabyName={addHistoricBabyName}
                     setCurrentForename={setCurrentForename}
                     filters={filters}
                 />
-                <GenderButton 
+                <GenderButton
                     setGenderFilter={setGenderFilter}
                 />
-                <EditSurnameButton 
+                <EditSurnameButton
                     currentName={currentName}
                     setCurrentSurname={setCurrentSurname}
                 />
             </div>
-            <AlphabetButtons setFirstNameCharFilter={setFirstNameCharFilter}/>
+            <AlphabetButtons setFirstNameCharFilter={setFirstNameCharFilter} />
         </div>
-        
+
     )
 }
 

@@ -1,29 +1,29 @@
 import React from 'react';
 import { List, Button } from 'antd';
 
-const FavouriteNames = ({names, onRemoveFromFavouite}) => {
+const FavouriteNames = ({ names, onRemoveFromFavouite }) => {
 
     return (
         <List
             itemLayout="horizontal"
             dataSource={names}
             header={<label>Favourite Names</label>}
-            renderItem={({forename, surname}) => (
+            renderItem={({ forename, surname }) => (
                 <List.Item
                     actions={[
-                    <Button 
-                        type="normal" 
-                        shape="round" 
-                        icon="close" 
-                        onClick={() => onRemoveFromFavouite({forename, surname})}
-                    />]}
+                        <Button
+                            type="normal"
+                            shape="round"
+                            icon="close"
+                            onClick={() => onRemoveFromFavouite({ forename, surname })}
+                        />]}
                 >
                     <List.Item.Meta
                         title={forename}
                         description={surname}
                     />
                 </List.Item>
-                    
+
             )}
         />
     )

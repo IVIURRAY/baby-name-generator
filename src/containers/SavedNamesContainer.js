@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => ({
     onAddToFavourite: payload => dispatch(addToFavourites(payload)),
     onRemoveFromFavouite: payload => dispatch(removeFromFavourites(payload))
 })
- 
+
 
 export default connect(
     mapStateToProps,

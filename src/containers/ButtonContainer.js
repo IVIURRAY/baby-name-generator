@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {addHistoricName, setCurrentForename, setCurrentSurname, setFilterGender, setFilterFirstNameChar, addToFavourites} from '../actions'
+import { addHistoricName, setCurrentForename, setCurrentSurname, setFilterGender, setFilterFirstNameChar, addToFavourites } from '../actions'
 import BabyButtons from '../components/buttons/BabyButtons';
 
 const mapStateToProps = state => ({

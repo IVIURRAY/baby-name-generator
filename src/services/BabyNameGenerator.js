@@ -4,7 +4,7 @@ const BabyNameGenerator = (isBoy, char = null) => {
 
     const pickRandomName = names => {
         return names[Math.floor(Math.random() * names.length)]
-        
+
     }
 
     const pickRandomLetter = mapping => {
